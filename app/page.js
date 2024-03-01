@@ -6,9 +6,6 @@ import Navbar from './Components/Navbar';
 import { MainContext } from './Context/MainFormDataContext';
 import { useContext } from 'react';
 import InvoiceList from './Components/InvoiceList';
-import PendingStatus from './Components/PendingStatus';
-import PaidStatus from './Components/PaidStatus';
-import DraftStatus from './Components/DraftStatus'
 
 
 
