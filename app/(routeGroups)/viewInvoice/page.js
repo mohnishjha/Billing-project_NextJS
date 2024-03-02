@@ -13,14 +13,15 @@ const ViewInvoice = () => {
 
   const contextHere = useContext(MainContext)
 
-  if(!contextHere.form || contextHere.form.length == 0){
-      return (
-      <>
-      <Navbar/>
-      <EmptyInvoice/>
-      </>
-        )
-  }
+  //checks if form doesn't have any contents then it renders home page elements
+  // if(!contextHere.form || contextHere.form.length == 0){
+  //     return (
+  //     <>
+  //     <Navbar/>
+  //     <EmptyInvoice/>
+  //     </>
+  //       )
+  // }
 
   return (
     <>
