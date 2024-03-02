@@ -11,7 +11,7 @@ const EmptyInvoice = () => {
           src="./Assets/icons/emptyInvoiceLogo.svg"
           alt="empty invoice logo"
           height={160}
-          width={193} className='w-193px h160px'
+          width={193} className='w-[193px] h-[160px]'
           priority
         />
         <h1 className="text-xl font-bold mt-10">There is nothing here</h1>

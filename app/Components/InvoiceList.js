@@ -18,7 +18,7 @@ const InvoiceList = () => {
             return (
                 <Link href='/viewInvoice' key={element.invoiceNumber}>
                 <button className='bg-white mt-6 pt-6 h-32 w-80 flex justify-around ml-6 mr-6 rounded-md shadow-slate-200 shadow-md' 
-                key={element.tName}>
+                >
                     <div>
                     <p className='font-semibold text-sm mb-4'>{element.invoiceNumber}</p>
                     <div className='text-slate-400 text-sm'>Due {element.tInvoiceDate}</div>

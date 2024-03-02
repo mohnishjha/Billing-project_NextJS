@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <MainDataFunc>
       <body className={inter.className}>
-          {children}     
+        <header className='p-11 bg-slate-800'></header>
+          {children} 
+          <footer className='bg-zinc-700 p-11'></footer>    
         </body>
       </MainDataFunc>
     </html>

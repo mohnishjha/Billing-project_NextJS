@@ -6,10 +6,9 @@ import Image from "next/image";
 import { useContext } from "react";
 import { MainContext } from "../../Context/MainFormDataContext";
 import Navbar from "@/app/Components/Navbar";
-import EmptyInvoice from "@/app/Components/EmptyInvoice";
 
 
-const ViewInvoice = () => {
+const ViewInvoice = ({params}) => {
 
   const contextHere = useContext(MainContext)
 

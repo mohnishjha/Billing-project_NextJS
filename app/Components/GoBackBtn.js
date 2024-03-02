@@ -12,7 +12,7 @@ const GoBackBtn = () => {
           src="./Assets/icons/goBackArrow.svg"
           alt="Go Back"
           width={9}
-          height={4} className="w-[9px] h-[16.5px]"/>
+          height={16} className="w-[9px] h-[16px]"/>
         <span className="font-bold text-xs ml-7">Go back</span>
       </button>
       </Link>
