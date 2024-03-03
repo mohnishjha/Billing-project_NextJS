@@ -10,14 +10,17 @@ const InvoiceList = () => {
 
     const contextHere = useContext(MainContext)
 
+    // as={`viewing/${element.invoiceNumber}`}
+
   return (
     <div>
         <Invoice/>
 
         {contextHere.form.map((element) => {
             return (
-                <Link href='/viewInvoice' key={element.invoiceNumber}>
-                <button className='bg-white mt-6 pt-6 h-32 w-80 flex justify-around ml-6 mr-6 rounded-md shadow-slate-200 shadow-md' 
+                <Link href={`/viewInvoice/${encodeURIComponent( element.invoiceNumber)}`}  key={element.invoiceNumber}>
+                <button className='bg-white mt-6 pt-6 h-32 w-80 flex justify-around ml-6 mr-6 rounded-md shadow-slate-200 shadow-md'
+
                 >
                     <div>
                     <p className='font-semibold text-sm mb-4'>{element.invoiceNumber}</p>

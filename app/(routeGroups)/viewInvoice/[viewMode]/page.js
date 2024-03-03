@@ -1,17 +1,22 @@
 'use client'
 
 import React, { useEffect } from "react";
-import GoBackBtn from "../../Components/GoBackBtn";
+import GoBackBtn from "@/app/Components/GoBackBtn"
 import Image from "next/image";
 import { useContext } from "react";
-import { MainContext } from "../../Context/MainFormDataContext";
+import { MainContext } from "@/app/Context/MainFormDataContext";
 import Navbar from "@/app/Components/Navbar";
 
 
 const ViewInvoice = ({params}) => {
 
   const contextHere = useContext(MainContext)
-
+  console.log(params)
+  let inID = decodeURIComponent(params.viewMode)
+  
+  useEffect(()=> {
+    //search inID in context.form array and then render the details below
+  }, [])
   //checks if form doesn't have any contents then it renders home page elements
   // if(!contextHere.form || contextHere.form.length == 0){
   //     return (
@@ -66,8 +71,7 @@ const ViewInvoice = ({params}) => {
         {/* details of invoice */}
         <div>
 
-        {/* <h1>InvoiceNumber</h1> */}
-        <h2>{contextHere.form[0].invoiceNumber}</h2>
+        <h2>{inID}</h2>
         <h1>{contextHere.form[0].tProjectDesc}</h1>
         <h2>{contextHere.form[0].fAddress}</h2>
         <h2>{contextHere.form[0].fCity}</h2>

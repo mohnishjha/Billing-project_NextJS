@@ -1,9 +1,20 @@
-import React from 'react'
+'use client'
 
-const page = ({params}) => {
+import React from 'react'
+import Head from 'next/head'
+import { usePathname} from 'next/navigation'
+
+const Page = () => {
+  const pathname = usePathname()
+  const rouID  = pathname.query 
+
   return (
-    <div>This is route nummer: {params.routeID}</div>
+    <div>
+      <Head>
+        <title>what</title>
+      </Head>
+    </div>
   )
 }
 
-export default page
+export default Page
