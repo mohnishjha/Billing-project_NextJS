@@ -14,11 +14,12 @@ const ViewInvoice = ({params}) => {
   const contextHere = useContext(MainContext)
   console.log(params)
   let inID = decodeURIComponent(params.viewMode)
-  
+
   useEffect(()=> {
     //search inID in context.form array and then render the details below
   }, [])
 
+  //testing commit
 
   //checks if form doesn't have any contents then it renders home page elements
   // if(!contextHere.form || contextHere.form.length == 0){
