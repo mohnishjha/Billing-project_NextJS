@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import { MainContext } from "@/app/Context/MainFormDataContext";
 import Navbar from "@/app/Components/Navbar";
+import PendingStatus from "@/app/Components/PendingStatus";
 
 
 const ViewInvoice = ({params}) => {
@@ -17,6 +18,8 @@ const ViewInvoice = ({params}) => {
   useEffect(()=> {
     //search inID in context.form array and then render the details below
   }, [])
+
+
   //checks if form doesn't have any contents then it renders home page elements
   // if(!contextHere.form || contextHere.form.length == 0){
   //     return (
@@ -51,17 +54,7 @@ const ViewInvoice = ({params}) => {
             backgroundColor: "rgba(255, 143, 0, 0.0571)",
           }}
         >
-          <Image
-            src="./Assets/icons/pendingStatus.svg"
-            alt="logo"
-            width={8}
-            height={8}
-            className="ml-4 mr-2"
-          />
-          <span
-            className="text-xs font-bold text-[#ff8f00]">
-            Pending
-          </span>
+          <PendingStatus/>
         </div>
       </div>
       <div

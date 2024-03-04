@@ -12,7 +12,7 @@ const PendingStatus = () => {
           }}
         >
           <Image
-            src="./Assets/icons/pendingStatus.svg"
+            src="/Assets/icons/pendingStatus.svg"
             alt="logo"
             width={8}
             height={8}

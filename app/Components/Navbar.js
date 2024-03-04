@@ -10,19 +10,19 @@ const Navbar = () => {
         
         <button>
         <Link href='/'>
-        <Image src="./Assets/icons/logo.svg" alt="logo" width={72} height={72} priority style={{ width: '72px', height: '72px' }}/>
+        <Image src="/Assets/icons/logo.svg" alt="logo" width={72} height={72} priority />
         </Link>
         </button>
 
       <div className='flex justify-between rightNavDiv items-center'>
         <button>
-          <Image src="./Assets/icons/darkMode.svg" alt='darkmode' height={19} width={19} style={{ width: '19px', height: '19px'}}/>
+          <Image src="/Assets/icons/darkMode.svg" alt='darkmode' height={19} width={19}/>
           </button>
           
         <div className='rectNoAngle'></div>
 
         <button>
-        <Image src="./Assets/icons/profilepic.svg" height={32} width={32} alt='profile pic' style={{ width: '32px', height: '32px' }} className='mr-6'/>
+        <Image src="/Assets/icons/profilepic.svg" height={32} width={32} alt='profile pic' className='mr-6'/>
         </button>
       </div>
       </nav>

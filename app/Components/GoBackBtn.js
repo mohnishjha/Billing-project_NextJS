@@ -9,7 +9,7 @@ const GoBackBtn = () => {
       <Link href='/'>
       <button className="flex ml-6 mt-8 bg-[#F8F8FB]">
         <Image
-          src="./Assets/icons/goBackArrow.svg"
+          src="/Assets/icons/goBackArrow.svg"
           alt="Go Back"
           width={9}
           height={16} className="w-[9px] h-[16px]"/>
