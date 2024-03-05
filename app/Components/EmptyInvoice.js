@@ -8,7 +8,7 @@ const EmptyInvoice = () => {
       <Invoice/>
       <div className="flex flex-col justify-center items-center mt-28">
         <Image
-          src="./Assets/icons/emptyInvoiceLogo.svg"
+          src="/Assets/icons/emptyInvoiceLogo.svg"
           alt="empty invoice logo"
           height={160}
           width={193} className='w-[193px] h-[160px]'

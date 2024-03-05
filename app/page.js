@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import { MainContext } from './Context/MainFormDataContext';
 import { useContext } from 'react';
 import InvoiceList from './Components/InvoiceList';
+import LoadingComponent from './Components/LoadingComponent';
 
 
 
@@ -16,11 +17,12 @@ const page = () => {
 
 
   return (
-    <div className='bg-[#FFFFF] h-screen'>
-      <Navbar/>
+    // <div className='bg-[#FFFFF] h-screen'>
+    //   <Navbar/>
       
-      {contextHere.form.length == 0 ? <EmptyInvoice/> : <InvoiceList/>}
-    </div>
+    //   {contextHere.form.length == 0 ? <EmptyInvoice/> : <InvoiceList/>}
+    // </div>
+    <LoadingComponent/>
   )
 }
 

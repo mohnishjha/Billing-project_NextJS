@@ -1,12 +1,13 @@
 'use client'
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import GoBackBtn from "@/app/Components/GoBackBtn"
-import Image from "next/image";
 import { useContext } from "react";
 import { MainContext } from "@/app/Context/MainFormDataContext";
 import Navbar from "@/app/Components/Navbar";
 import PendingStatus from "@/app/Components/PendingStatus";
+import EmptyInvoice from "@/app/Components/EmptyInvoice";
+import LoadingComponent from "@/app/Components/LoadingComponent";
 
 
 const ViewInvoice = ({params}) => {
@@ -14,22 +15,40 @@ const ViewInvoice = ({params}) => {
   const contextHere = useContext(MainContext)
   console.log(params)
   let inID = decodeURIComponent(params.viewMode)
+  const [babaka, setBabaka] = useState(null)
+
+
+  //checks if form doesn't have any contents then it renders home page elements
+
+  if(!contextHere.form || contextHere.form.length == 0){
+      return (
+      <>
+      <Navbar/>
+      <EmptyInvoice/>
+      </>
+        )
+  }
+
 
   useEffect(()=> {
     //search inID in context.form array and then render the details below
-  }, [])
+    if(contextHere.form && contextHere.form.length > 0){
 
-  //testing commit
+      for(let i=0;i<contextHere.form.length;i++){
+        if(contextHere.form[i].invoiceNumber == inID){
+          setBabaka(i)
+          console.log(babaka)
+          break;
+        }
+      }
+    }
+     return;
 
-  //checks if form doesn't have any contents then it renders home page elements
-  // if(!contextHere.form || contextHere.form.length == 0){
-  //     return (
-  //     <>
-  //     <Navbar/>
-  //     <EmptyInvoice/>
-  //     </>
-  //       )
-  // }
+  },[])
+
+  if(babaka == null){
+    return <LoadingComponent/>
+  }
 
   return (
     <>
@@ -64,14 +83,14 @@ const ViewInvoice = ({params}) => {
         
         {/* details of invoice */}
         <div>
-
-        <h2>{inID}</h2>
-        <h1>{contextHere.form[0].tProjectDesc}</h1>
-        <h2>{contextHere.form[0].fAddress}</h2>
-        <h2>{contextHere.form[0].fCity}</h2>
-        <h2>{contextHere.form[0].fPostCode}</h2>
-        <h2>{contextHere.form[0].fCountry}</h2>
-        <h2>{contextHere.form[0].tInvoiceDate}</h2>
+          
+        <h2>{contextHere.form[babaka].invoiceNumber}</h2>
+        <h1>{contextHere.form[babaka].tProjectDesc}</h1>
+        <h2>{contextHere.form[babaka].fAddress}</h2>
+        <h2>{contextHere.form[babaka].fCity}</h2>
+        <h2>{contextHere.form[babaka].fPostCode}</h2>
+        <h2>{contextHere.form[babaka].fCountry}</h2>
+        <h2>{contextHere.form[babaka].tInvoiceDate}</h2>
 
 
         </div>

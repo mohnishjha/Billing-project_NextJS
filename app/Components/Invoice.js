@@ -46,7 +46,7 @@ const Invoice = () => {
               className="w-24 h-11 rounded-3xl text-white text-xs font-bold flex items-center justify-around pl-1/2 pr-2 ml-5 bg-[#7c5dfa]"
               >
               <Image
-                src="./Assets/icons/newInvoiceBtn.svg"
+                src="/Assets/icons/newInvoiceBtn.svg"
                 alt="new invoice"
                 height={32}
                 width={32}
